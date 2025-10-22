@@ -1,0 +1,24 @@
+@use './variables.scss';
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background: var(--background-color);
+    font-family: "poppins", sans-serif;
+    color: --text-color1;
+}
+
+main{
+    
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        padding: 2rem 5rem;
+        max-width: 1280px;
+        margin: auto;
+    }
+}

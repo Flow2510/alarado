@@ -1,0 +1,23 @@
+.hero{
+    padding: 1rem 3rem;
+
+    @media screen and (min-width:768px) {
+        padding: 0;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__image{
+        width: 100%;
+        display: block;
+        max-width: 400px;
+        margin: auto;
+
+        @media screen and (min-width:768px) {
+            max-width: none;
+            min-width: 250px;
+        }
+    }
+}

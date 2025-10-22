@@ -1,0 +1,77 @@
+@use '../../variables.scss';
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    max-width: 1280px;
+    margin: auto;
+
+    @media screen and (min-width:768px) {
+        padding: 2rem 6rem;
+    }
+
+    &__nav{
+        display: none;
+
+        @media screen and (min-width:768px) {
+            display: flex;
+            gap: 3rem;
+        }
+
+        &--active{
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100vh;
+            background: var(--background-color2);
+            text-align: center;
+            gap: 2rem;
+            font-size: 1.5rem;
+            padding-top: 5rem;
+        }
+
+        &-link{
+            text-decoration: none;
+            color: var(--text-color2);
+            font-weight: 600;
+
+            &--selected{
+                color: var(--text-color3);
+                text-decoration: underline;
+                font-weight: 600;
+                text-underline-offset: 0.4rem;
+            }
+        }
+
+        &-theme{
+            
+            @media screen and (min-width:768px) {
+                display: none;
+            }
+        }
+    }
+
+    &__button{
+        z-index: 10;
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        @media screen and (min-width:768px) {
+            display: none;
+        }
+    }
+
+    &__theme-wrapper{
+        display: none;
+
+        @media screen and (min-width:768px) {
+            display: block;
+        }
+    }
+}
